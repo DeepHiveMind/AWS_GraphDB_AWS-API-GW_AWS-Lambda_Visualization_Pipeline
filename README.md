@@ -2,7 +2,8 @@
 
 This project is a **custom Visualization pipeline** on top of AWS Neptune GraphDB Cluster using Open source Visualization library by creating **RESTful interafce on top of Neptune DB** with the leverage of **AWS API G/W, AWS Lambda** primarily.  I'm leveraging the below architecture to Visualize graph data using 
 
-	- Obviously, Amazon Neptune Cluster
+- Obviously, Amazon Neptune Cluster
+
 	- AWS API Gateway
 	- AWS Lambda functions
 	- AWS  S3 (for hosting static website)
@@ -17,11 +18,18 @@ This project is a **custom Visualization pipeline** on top of AWS Neptune GraphD
 
 ![](images/architecture.png)
 
-**Why so much- Let me explain!**
+
+**Why so much fuss? Let me explain!**
 
  - **Since Amazon Neptune instance can't be accessed outside the VPC, we are using AWS Lambda function in VPC**. This AWS Lambda function is accessed through the proxy created and exposed to internet using Amazon API Gateway. i.e., This project creates **RESTful interface on Neptune DB** by using the AWS Lambda function to access this data and expose it over RESTful interface through Amazon API Gateway.
 
  - Once the proxy is exposed, we can access the APIs from Javascript code being executed/hosted from Amazon S3 (static website).
+
+**Why VIS.js? Let me share my point of View!**
+In this project, I've focussed on visualizing data in Amazon Neptune using [VIS.js](http://visjs.org). As VIS.js is a Javascript library used for visualizing graph data. It has various components for displaying data in various ways, such as 
+	- DataSet, Timeline, 
+	- Graph2D, Graph3D, Network etc.
+In addition to, VIS.js, One can leverage other open source libraries and solutions to visualize data in Amazon Neptune.
 
 
 ## Additional Note:
@@ -32,11 +40,6 @@ With Amazon Neptune you can use open source and popular graph query languages su
 	- **SPARQL** for **W3C RDF model graph databases**.
 	
 	
-	In this project, I've focussed on visualizing  data in Amazon Neptune using [VIS.js](http://visjs.org).
-VIS.js is a Javascript library used for visualizing graph data. It has various components for displaying data in various ways, such as 
-	- DataSet, Timeline, 
-	- Graph2D, Graph3D, Network etc. 
-
 In addition to, VIS.js, One can leverage other open source libraries and solutions to visualize data in Amazon Neptune. 
 	- 1. GraphExp open source visualization tool
 	- 2. D3.js javascript library by D3JS.org 
