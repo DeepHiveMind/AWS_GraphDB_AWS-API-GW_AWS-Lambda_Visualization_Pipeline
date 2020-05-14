@@ -2,20 +2,20 @@
 
 This project is a **custom Visualization pipeline** on top of AWS Neptune GraphDB Cluster using Open source Visualization library by creating **RESTful interafce on top of Neptune DB** with the leverage of **AWS API G/W, AWS Lambda** primarily.  I'm leveraging the below architecture to Visualize graph data using 
 
-	- Obviously, Amazon Neptune Cluster
+- Obviously, Amazon Neptune Cluster
 	
-	- AWS API Gateway
+- AWS API Gateway
 	
-	- AWS Lambda functions
-	- AWS  S3 (for hosting static website)
-	- [VIS.js](http://visjs.org) Open sourcevlibrary
+- AWS Lambda functions
+- AWS  S3 (for hosting static website)
+- [VIS.js](http://visjs.org) Open sourcevlibrary
 	
-	- AWS IAM for permissions
-			-> creating AWS Lambda functions  
-			-> creating IAM roles for Amazon Neptune cluster to access S3 and, for API Gateway to access AWS Lambda functions  
-			-> APIs in Amazon API Gateway  
-			-> Amazon S3 buckets  
-			-> creating and attaching VPC Endpoints to the VPC 
+- AWS IAM for permissions
+	-> creating AWS Lambda functions  
+	-> creating IAM roles for Amazon Neptune cluster to access S3 and, for API Gateway to access AWS Lambda functions  
+	-> APIs in Amazon API Gateway  
+	-> Amazon S3 buckets  
+	-> creating and attaching VPC Endpoints to the VPC 
 
 
 ![](images/architecture.png)
