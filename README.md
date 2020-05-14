@@ -1,4 +1,4 @@
-# Visualize data in Amazon Neptune using VIS.js library
+# Visualization Pipeline on Amazon Neptune (creating RESTful Interface)
 
 This project is a **custom Visualization pipeline** on top of AWS Neptune GraphDB Cluster using Open source Visualization library by creating **RESTful interafce on top of Neptune DB** with the leverage of AWS API G/W, AWS Lambda primarily.  I'm leveraging the below architecture to Visualize graph data using 
 	- an open source [VIS.js](http://visjs.org) library along with 
@@ -23,6 +23,7 @@ This project is a **custom Visualization pipeline** on top of AWS Neptune GraphD
  - This project creates **RESTful interface on Neptune DB** by using the AWS Lambda function to access this data and expose it over RESTful interface through Amazon API Gateway.
 
  - Once the proxy is exposed, we can access the APIs from Javascript code being executed from Amazon S3 (static website).
+
 
 ## Additional Note:
 
