@@ -1,11 +1,12 @@
 # Visualization Pipeline on Amazon Neptune (creating RESTful Interface)
 
 This project is a **custom Visualization pipeline** on top of AWS Neptune GraphDB Cluster using Open source Visualization library by creating **RESTful interafce on top of Neptune DB** with the leverage of **AWS API G/W, AWS Lambda** primarily.  I'm leveraging the below architecture to Visualize graph data using 
-	- an open source [VIS.js](http://visjs.org) library along with 
+
+	- Obviously, Amazon Neptune Cluster
 	- AWS API Gateway
 	- AWS Lambda functions
 	- AWS  S3 (for hosting static website)
-	- Obviously, Amazon Neptune Cluster
+	- [VIS.js](http://visjs.org) Open sourcevlibrary
 	- AWS IAM for permissions
 			-> creating AWS Lambda functions  
 			-> creating IAM roles for Amazon Neptune cluster to access S3 and, for API Gateway to access AWS Lambda functions  
@@ -18,11 +19,9 @@ This project is a **custom Visualization pipeline** on top of AWS Neptune GraphD
 
 **Why so much- Let me explain!**
 
- - **Since Amazon Neptune instance can't be accessed outside the VPC, we are using AWS Lambda function in VPC. This AWS Lambda function is accessed through the proxy created and exposed to internet using Amazon API Gateway.
+ - **Since Amazon Neptune instance can't be accessed outside the VPC, we are using AWS Lambda function in VPC**. This AWS Lambda function is accessed through the proxy created and exposed to internet using Amazon API Gateway. i.e., This project creates **RESTful interface on Neptune DB** by using the AWS Lambda function to access this data and expose it over RESTful interface through Amazon API Gateway.
 
- - This project creates **RESTful interface on Neptune DB** by using the AWS Lambda function to access this data and expose it over RESTful interface through Amazon API Gateway.
-
- - Once the proxy is exposed, we can access the APIs from Javascript code being executed from Amazon S3 (static website).
+ - Once the proxy is exposed, we can access the APIs from Javascript code being executed/hosted from Amazon S3 (static website).
 
 
 ## Additional Note:
