@@ -1,11 +1,6 @@
 # Visualize data in Amazon Neptune using VIS.js library
 
-Amazon Neptune is a fast, reliable, fully managed graph database service available from AWS.
-With Amazon Neptune you can use open source and popular graph query languages such as 
-	- **Apache TinkerPop Gremlin** for **property graph databases** or 
-	- **SPARQL** for **W3C RDF model graph databases**.
-
-This Project I'm leveraging the below architecture to Visualize graph data using 
+This project is a **custom Visualization pipeline** on top of AWS Neptune GraphDB Cluster using Open source Visualization library by creating **RESTful interafce on top of Neptune DB** with the leverage of AWS API G/W, AWS Lambda primarily.  I'm leveraging the below architecture to Visualize graph data using 
 	- an open source [VIS.js](http://visjs.org) library along with 
 	- AWS API Gateway
 	- AWS Lambda functions
@@ -21,16 +16,23 @@ This Project I'm leveraging the below architecture to Visualize graph data using
 
 ![](images/architecture.png)
 
-**Why so much- Let me explain! **
+**Why so much- Let me explain!**
 
- - ** Since Amazon Neptune instance can't be accessed outside the VPC, we are using AWS Lambda function in VPC. This AWS Lambda function is accessed through the proxy created and exposed to internet using Amazon API Gateway.
+ - **Since Amazon Neptune instance can't be accessed outside the VPC, we are using AWS Lambda function in VPC. This AWS Lambda function is accessed through the proxy created and exposed to internet using Amazon API Gateway.
 
  - This project creates **RESTful interface on Neptune DB** by using the AWS Lambda function to access this data and expose it over RESTful interface through Amazon API Gateway.
 
  - Once the proxy is exposed, we can access the APIs from Javascript code being executed from Amazon S3 (static website).
 
 ## Additional Note:
-In this project, I've focussed on visualizing  data in Amazon Neptune using [VIS.js](http://visjs.org).
+
+Amazon Neptune is a fast, reliable, fully managed graph database service available from AWS.
+With Amazon Neptune you can use open source and popular graph query languages such as 
+	- **Apache TinkerPop Gremlin** for **property graph databases** or 
+	- **SPARQL** for **W3C RDF model graph databases**.
+	
+	
+	In this project, I've focussed on visualizing  data in Amazon Neptune using [VIS.js](http://visjs.org).
 VIS.js is a Javascript library used for visualizing graph data. It has various components for displaying data in various ways, such as 
 	- DataSet, Timeline, 
 	- Graph2D, Graph3D, Network etc. 
