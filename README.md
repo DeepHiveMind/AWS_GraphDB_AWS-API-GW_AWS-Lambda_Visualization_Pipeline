@@ -252,6 +252,7 @@ http://\<bucket-name\>.s3-website.\<aws-region-code\>.amazonaws.com
 
 
 [[ ------------------------------------------]]
+
 **A quick note as update for reference**
 As of Nov 2019, Neptune launched Workbench, which is a **Jupyter based visualization** for **Gremlin and SPARQL**. One can find more details here:
 https://aws.amazon.com/about-aws/whats-new/2019/12/amazon-neptune-workbench-provides-in-console-experience-to-query-your-graph/
@@ -261,11 +262,14 @@ https://aws.amazon.com/about-aws/whats-new/2019/12/amazon-neptune-workbench-prov
 **Cost aspect for using Neptune Workbench** -There are no additional charges for the workbench, apart from the Sagemaker costs incurred by the notebook. These notebooks do support Start and Stop APIs, thereby making it possible for you to enable them only when you need it.
 
 *Other generic graph visualization options that people have used are:
-	GraphExp - There was a recent pull request that introduced a setting to disable some query patterns that don't work with Amazon Neptune (eg: Variables). Find details in the README.
-	Tom Sawyer Software - Commercial Software that supports web-based and thick client visualizations.
-	Cambridge Intelligence / Keylines - Commercial SDK for building visualizations.
-	Metaphactory - Wiki-based Knowledge Graph Application that supports RDF/SPARQL.
-	Arcade - Commercial Gremlin visualization engine
+
+	(A) GraphExp - There was a recent pull request that introduced a setting to disable some query patterns that don't work with Amazon Neptune (eg: Variables). Find details in the README.
+	(B) Tom Sawyer Software - Commercial Software that supports web-based and thick client visualizations.
+	(C) Cambridge Intelligence / Keylines - Commercial SDK for building visualizations.
+	(D) Metaphactory - Wiki-based Knowledge Graph Application that supports RDF/SPARQL.
+	(E) Arcade - Commercial Gremlin visualization engine
 	Graphileon*
 
 If you've used others, do share.
+
+[[ ------------------------------------------]]
